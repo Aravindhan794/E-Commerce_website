@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoppify collections</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    
+
+    <nav class="navbar">
+      <img src="Picsart_24-01-20_23-41-04-766.png" id="ha">
+      <h1 id="ha1">ARAVIND</h1>
+     
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="index.html">Home</a></p>
+            <p class="navbar-link"><a href="collection.html">Collections</a></p>
+            <p class="navbar-link"><a href="contact.html">Contact</a></p>
+            <p class="navbar-link" id="login-nav"><a href="login.html">Login</a></p>
+        </div>
+        <div class="navbar-menu-toggle" onclick="ShowNavbar()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+     <div class="side-navbar" id="sidenav" >
+        <p style="text-align: right;" onclick="CloseNavbar()">
+            <i class="fa-solid fa-xmark"></i>
+        </p>
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="collection.html">Collections</a></p>
+            <p class="side-navbar-link"><a href="contact.html">Contact</a></p>
+            <p class="side-navbar-link"><a href="login.html">Login</a></p>
+        </div>
+    </div>
+
+    <div class="product-section">
+        <form class="product-search">
+            <input type="text" id="search" placeholder="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+
+        <div class="products" id="products">
+          <div class="product-box">
+            <a href="login.html" onclick="Login()">
+            <img src="collection1.jpg" height="220px" width="220px" alt="">
+            <p>Men's Shirt</p>
+          </a>
+          </div>
+          <div class="product-box">
+            <a href="login.html" onclick="Login()">
+            <img src="collection2.jpg" height="220px" width="220px" alt="">
+            <p>Formal Combo</p>
+          </a>
+          </div>
+          <div class="product-box">
+            <a href="login.html" onclick="Login()">
+            <img src="colllection3.jpg" height="220px" width="220px" alt="">
+            <p>Womens Dress</p>
+          </a>
+          </div>
+          <div class="product-box">
+            <a href="login.html" onclick="Login()">
+            <img src="collection4.jpg"  height="220px" width="220px" alt="">
+            <p>Womens Accessories</p>
+          </a>
+          </div>
+          <div class="product-box" onclick="Login()">
+            <a href="login.html">
+            <img src="collection5.jpg" height="220px" width="220px" alt="">
+            <p>Mens Watch</p>
+          </a>
+          </div>
+          <div class="product-box" onclick="Login()">
+            <a href="login.html">
+            <img  src="collection6.jpg" height="220px" width="220px" alt="">
+            <p>Cotton Pant</p>
+          </a>
+          </div>
+          <div class="product-box">
+            <a href="login.html" onclick="Login()">
+            <img src="collection7.jpg" height="220px" width="220px" alt="">
+            <p>Women's Short</p>
+          </a>
+          </div>
+          <div class="product-box">
+            <a href="login.html" onclick="Login()">
+            <img src="collection8.jpg" height="220px" width="220px" alt="">
+            <p>T-shirt</p>
+           </a>
+          </div>
+          <div class="product-box" onclick="Login()">
+            <a href="login.html">
+            <img src="collection9.jpg" height="220px" width="220px" alt="">
+            <p>Jens</p>
+          </a>
+          </div>
+          <div class="product-box">
+            <a href="login.html" onclick="Login()">
+            <img src="collection10.jpg" height="220px" width="220px" alt="">
+            <p>Women's Shirt</p>
+          </a>
+          </div>
+          <div class="product-box">
+            <a href="login.html" onclick="Login()">
+            <img src="collection11.jpg" height="220px" width="220px" alt="">
+            <p>Shoes</p>
+          </a>
+          </div>
+          <div class="product-box">
+            <a href="login.html" onclick="Login()">
+            <img src="collection12.jpg" height="220px" width="220px" alt="">
+            <p>Cap</p>
+          </a>
+          </div>
+        </div>
+    </div>
+    <div class="footer">
+    <div class="footer-container">
+        <div class="footer-box-1">
+            <h2 class="headingText">ARAVIND</h2>
+            <p>Stay connected with the latest trends and exclusive offers by following us on social media</p>
+            <div class="footer-icon-container">
+                <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+            </div>
+        </div>
+        <p>@2024 aravind.com</p>
+    </div>
+</div>
+    <script>
+        var productContainer = document.getElementById("products")
+        var search = document.getElementById("search")
+        var productsList = productContainer.querySelectorAll("div")
+
+        search.addEventListener("keyup",function(){
+          var enteredValue = event.target.value.toUpperCase()
+
+          for(count=0;count<productsList.length;count=count+1)
+          {
+             var productname = productsList[count].querySelector("p").textContent
+             if(productname.toUpperCase().indexOf(enteredValue)<0)
+             {
+                productsList[count].style.display="none";   
+            }
+            else{
+                productsList[count].style.display="block";
+            }
+          }
+
+        });
+
+     var sidenav= document.getElementById("sidenav")
+    
+    function ShowNavbar()
+    {
+      sidenav.style.left="0";
+    };
+    
+    function CloseNavbar()
+    {
+      sidenav.style.left="-60%"
+    };
+
+
+    function Login(){
+          alert("Login Users only allow to Buy..!please Login and continue..! ")
+        }
+    </script>
+</body>
+</html>
